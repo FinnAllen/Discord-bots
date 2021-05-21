@@ -1,8 +1,6 @@
 import datetime
 import discord
 
-token = 'ODQ1MjAwMzIyNzc5ODA3Nzk0.YKdgJA.5hYY7rsQOeH8r_1VFBgSjFTUc8A'  # token 
-
 client = discord.Client()  # starts the discord client
 
 schedule = {0 : 'Monday: *No raid today.*',
