@@ -1,6 +1,6 @@
 import datetime
 import discord
-import os
+from random import randrange
 
 token = 'ODQ1MjAwMzIyNzc5ODA3Nzk0.YKdgJA.5hYY7rsQOeH8r_1VFBgSjFTUc8A'  # token 
 
@@ -13,6 +13,18 @@ schedule = {0 : 'Monday: *No raid today.*',
             4 : 'Friday: **8-11 EST**',
             5 : 'Saturday: **Encouraged 8-11 EST**',
             6 : 'Sunday: *No raid today.*'}
+            
+flirts = {0 : 'You must be a conjurer because you just cast stoneskin in my pants.',
+          1 : 'I hope youre a paladin because I want you to Flash me',
+          2 : 'Hey babe, what is the drop rate on those pants?',
+          3 : 'Hey babe, I could have sworn I queued for Duty Finder not Cutie Finder.',
+          4 : 'Hey is that a linkpearl in your back pocket cause that booty is calling me.',
+          5 : 'Dang, even mortal gaze could not turn me away from you.',
+          6 : 'Are you a white mage? Because you are sure doing a great job at keeping me up!',
+          7 : "I took one look at you and you Y'shtola my heart.",
+          8 : "Have you been leveling fisherman? Because I'm hooked!",
+          9 : "I gottaa say I'm a real succor for you, you really do make my aetherflow"
+          }
 
 @client.event
 async def on_ready():  # method expected by client. This runs once when connected
@@ -38,7 +50,9 @@ async def on_message(message):  # event that happens on message
       await message.channel.send('Current Commands:') 
       await message.channel.send('?schedule?') 
       await message.channel.send('?today?') 
+    elif '?flirt?' in message.content.lower():
+      awai message.channel.send(flirts[randrange(10)])
     
             
-token = "ACCESS_TOKEN"
+token = "ODQ1MjAwMzIyNzc5ODA3Nzk0.YKdgJA.X1HmpEjLhse2B0xViNAo5IzNDi0"
 client.run(token)  # run the token
