@@ -1,5 +1,8 @@
 import datetime
 import discord
+import os
+
+token = 'ODQ1MjAwMzIyNzc5ODA3Nzk0.YKdgJA.5hYY7rsQOeH8r_1VFBgSjFTUc8A'  # token 
 
 client = discord.Client()  # starts the discord client
 
@@ -37,5 +40,5 @@ async def on_message(message):  # event that happens on message
       await message.channel.send('?today?') 
     
             
-
+token = os.environ["ACCESS_TOKEN"]
 client.run(token)  # run the token
