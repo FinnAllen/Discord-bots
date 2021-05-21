@@ -40,5 +40,5 @@ async def on_message(message):  # event that happens on message
       await message.channel.send('?today?') 
     
             
-token = os.environ["ACCESS_TOKEN"]
+token = "ACCESS_TOKEN"
 client.run(token)  # run the token
